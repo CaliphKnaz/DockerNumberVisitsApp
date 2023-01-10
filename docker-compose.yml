@@ -1,0 +1,12 @@
+# define the verison fo docker-compose to be used
+version: '3'
+
+#define the contianers to be built
+services:
+    redis-server: 
+        image: 'redis'
+    node-app: 
+        build: .
+        #define the lcoal port and the container port
+        ports:
+            - "4001:8081"
